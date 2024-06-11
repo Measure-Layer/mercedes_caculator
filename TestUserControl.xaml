@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="MapleWPF.TestUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MapleWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="200">
+    <Grid>
+        <Viewbox>
+            <Border Height="100" Width="200" Padding="5" CornerRadius="50" Background="LightSteelBlue">
+                <Button Click="Button_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Button.Content>
+                        <Border x:Name="InnerBorder" CornerRadius="45" Background="LightBlue">
+                            <Border x:Name="ToggleBorder" Height="90" Width="90" HorizontalAlignment="Right" CornerRadius="45" Background="AliceBlue">
+
+                            </Border>
+                        </Border>
+                    </Button.Content>
+                </Button>
+            </Border>
+        </Viewbox>
+    </Grid>
+</UserControl>
