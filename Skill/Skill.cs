@@ -129,7 +129,7 @@ namespace MapleWPF
                         normalRate = combo.OutputNormalPctgDensity / normalStd * 100.0;
                         v1Rate = combo.OutputV1PctgDensity / v1Std * 100.0;
                         combo.OutputNormalRate = normalRate.ToString("F2") + "%";
-                        combo.OutputV1Rate = normalRate.ToString("F2") + "%";
+                        combo.OutputV1Rate = v1Rate.ToString("F2") + "%";
                     }
                 }
             }
