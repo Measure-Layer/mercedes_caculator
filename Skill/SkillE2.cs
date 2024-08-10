@@ -37,7 +37,7 @@ namespace MapleWPF
         public static double V2TotalFinalDmg = 0.0;
 
 
-        private static int _e2Level = 1;
+        private static int _e2Level = 30;
         public static int E2Level
         {
             get { return _e2Level; }
@@ -65,7 +65,7 @@ namespace MapleWPF
         }
         public static void InitE2()
         {
-            E2Level = 1;
+            E2Level = 30;
             V2ExtraFinalDmgFromAttPctg = 0.0;
         }
     }

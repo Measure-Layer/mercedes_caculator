@@ -15,7 +15,7 @@ namespace MapleWPF
 
         public static double V1sFinalDmg = 0.6;
 
-        private static int _e1Level = 1;
+        private static int _e1Level = 30;
         public static int E1Level
         {
             get { return _e1Level; }
@@ -50,7 +50,7 @@ namespace MapleWPF
 
         public static void InitE1()
         {
-            E1Level = 1;
+            E1Level = 30;
         }
     }
 }

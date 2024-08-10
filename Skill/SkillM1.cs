@@ -41,7 +41,7 @@ namespace MapleWPF
         }
 
 
-        private static int _m1Level = 1;
+        private static int _m1Level = 30;
         public static int M1Level
         {
             get { return _m1Level; }
@@ -99,7 +99,7 @@ namespace MapleWPF
 
         public static void InitM1()
         {
-            M1Level = 1;
+            M1Level = 30;
         }
     }
 }

@@ -8,7 +8,7 @@ namespace MapleWPF
 {
     internal partial class Skill
     {
-        private static int _m2Level = 1;
+        private static int _m2Level = 30;
         public static int M2Level
         {
             get { return _m2Level; }
@@ -58,7 +58,7 @@ namespace MapleWPF
 
         public static void InitM2()
         {
-            M2Level = 1;
+            M2Level = 30;
         }
     }
 }

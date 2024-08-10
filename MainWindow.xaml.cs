@@ -36,10 +36,10 @@ namespace MapleWPF
                 V1ComboBox.Items.Add(i);
                 V2ComboBox.Items.Add(i);
             }
-            M1ComboBox.SelectedIndex = 0;
-            M2ComboBox.SelectedIndex = 0;
-            V1ComboBox.SelectedIndex = 0;
-            V2ComboBox.SelectedIndex = 0;
+            M1ComboBox.SelectedIndex = 29;
+            M2ComboBox.SelectedIndex = 29;
+            V1ComboBox.SelectedIndex = 29;
+            V2ComboBox.SelectedIndex = 29;
 
             Skill.LoadDefaultCombo();
         }
