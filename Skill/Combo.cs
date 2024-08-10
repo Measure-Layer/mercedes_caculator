@@ -35,6 +35,7 @@ namespace MapleWPF
             UpdateIr();
             UpdateIrPctg();
             UpdateTotalDuration();
+            UpdateE2Pctg();
             UpdateV1tPctg();
             UpdateOutput();
             Skill.UpdateCombo();

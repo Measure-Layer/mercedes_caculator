@@ -58,9 +58,6 @@
     <Compile Include="ComboControl.xaml.cs">
       <DependentUpon>ComboControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ConstBoard.xaml.cs">
-      <DependentUpon>ConstBoard.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Skill\Combo.cs" />
     <Compile Include="Skill\ComboCd.cs" />
     <Compile Include="Skill\ComboCombo.cs" />
@@ -91,11 +88,11 @@
     <Compile Include="WindowHelp.xaml.cs">
       <DependentUpon>WindowHelp.xaml</DependentUpon>
     </Compile>
-    <Page Include="ComboControl.xaml">
+    <Page Include="ColorDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ConstBoard.xaml">
+    <Page Include="ComboControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -111,10 +108,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MapleRDictionary.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="SkillConstItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

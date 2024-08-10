@@ -32,6 +32,7 @@ namespace MapleWPF
                     combo.UpdateV1tPctg();
                     combo.UpdateV1AndV1V2ComboPctg();
                     combo.UpdateIrPctg();
+                    combo.UpdateE2Pctg();
                     combo.UpdateOutput();
                     Skill.UpdateCombo();
                 }

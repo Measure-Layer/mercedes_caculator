@@ -6,11 +6,11 @@
              xmlns:local="clr-namespace:MapleWPF"
              mc:Ignorable="d" 
              d:DesignHeight="50" d:DesignWidth="1305">
-    <StackPanel Background="AliceBlue" Orientation="Horizontal" Width="AUTO">
-        <Border Background="AliceBlue" Width="50" BorderBrush="SkyBlue" BorderThickness="3 0 1 0">
+    <StackPanel Background="{StaticResource KalingRed0}" Orientation="Horizontal" Width="AUTO">
+        <Border Background="{StaticResource KalingRed0}" Width="50" BorderBrush="{StaticResource KalingRed5}" BorderThickness="3 0 1 0">
             <TextBlock Text="{Binding Order}" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Border>
-        <Border Background="AliceBlue" Width="280" BorderBrush="SkyBlue" BorderThickness="0 0 1 0">
+        <Border Background="{StaticResource KalingRed0}" Width="280" BorderBrush="{StaticResource KalingRed5}" BorderThickness="0 0 1 0">
             <StackPanel Orientation="Horizontal" Margin="5">
                 <Image Source="{Binding ImgSource0}" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"/>
                 <Image Source="{Binding ImgSource1}" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
@@ -24,51 +24,51 @@
         </Border>
         <Button x:Name="HatButton" 
                 Background="{Binding HatSecondColor}" 
-                BorderBrush="SkyBlue"
+                BorderBrush="{StaticResource KalingRed5}"
                 BorderThickness="0 0 1 0"
                 Content="{Binding HatSecondStr}" FontSize="20" FontFamily="Consolas"
                 Width="50" 
                 Click="HatButton_Click"/>
-        <Border Width="50" BorderBrush="SkyBlue" BorderThickness="0 0 1 0">
+        <Border Width="50" BorderBrush="{StaticResource KalingRed5}" BorderThickness="0 0 1 0">
             <TextBlock Text="{Binding OutputPeriodic}" Foreground="{Binding OutputPeriodicColor}" FontSize="20" FontFamily="Consolas" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Border>
-        <Border Width="100" BorderBrush="SkyBlue" BorderThickness="0 0 1 0">
+        <Border Width="100" BorderBrush="{StaticResource KalingRed5}" BorderThickness="0 0 1 0">
             <TextBlock Text="{Binding OutputPauseDuration}" FontSize="20" FontFamily="Consolas" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Border>
-        <Button Height="50" Width="75" BorderBrush="SkyBlue" BorderThickness="0 0 1 0"
+        <Button Height="50" Width="75" BorderBrush="{StaticResource KalingRed5}" BorderThickness="0 0 1 0"
         Background="Transparent" Content="{Binding OutputLastRecovery}"
         FontSize="20" Foreground="{Binding OutputLastRecoveryColor}"
         FontFamily="Consolas" HorizontalAlignment="Center" VerticalAlignment="Center"
         x:Name="LastDelayButton" Click="LastDelayButton_Click"/>
-        <Button Width="50" Padding="5 0" x:Name="IrButton" Background="Transparent" BorderBrush="SkyBlue" BorderThickness="0 0 1 0" Click="IrButton_Click">
+        <Button Width="50" Padding="5 0" x:Name="IrButton" Background="Transparent" BorderBrush="{StaticResource KalingRed5}" BorderThickness="0 0 1 0" Click="IrButton_Click">
             <Button.Content>
                 <Image x:Name="IrImg" Source="{Binding IrSource}" Stretch="None"/>
             </Button.Content>
         </Button>
-        <Border Width="50" BorderBrush="SkyBlue" BorderThickness="0 0 1 0">
+        <Border Width="50" BorderBrush="{StaticResource KalingRed5}" BorderThickness="0 0 1 0">
             <TextBlock Text="{Binding OutputIrCount}" FontSize="20" Foreground="{Binding OutputIrColor}" FontFamily="Consolas" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Border>
-        <Border Width="100" BorderBrush="SkyBlue" BorderThickness="0 0 1 0">
+        <Border Width="100" BorderBrush="{StaticResource KalingRed5}" BorderThickness="0 0 1 0">
             <TextBlock Text="{Binding OutputTotalDuration}" FontSize="20" FontFamily="Consolas" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Border>
-        <Button Width="50" Padding="5 0" x:Name="V2Button" Background="Transparent" BorderBrush="SkyBlue" BorderThickness="0 0 1 0" Click="V2Button_Click">
+        <Button Width="50" Padding="5 0" x:Name="V2Button" Background="Transparent" BorderBrush="{StaticResource KalingRed5}" BorderThickness="0 0 1 0" Click="V2Button_Click">
             <Button.Content>
                 <Image x:Name="V2Img" Source="{Binding V2Source}" Stretch="None"/>
             </Button.Content>
         </Button>
-        <Border Width="100" BorderBrush="SkyBlue" BorderThickness="0 0 1 0" Padding="0 0 10 0">
+        <Border Width="100" BorderBrush="{StaticResource KalingRed5}" BorderThickness="0 0 1 0" Padding="0 0 10 0">
             <TextBlock Text="{Binding OutputOutputNormal}" FontSize="20" FontFamily="Consolas" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         </Border>
-        <Border Width="100" BorderBrush="SkyBlue" BorderThickness="0 0 1 0" Padding="0 0 10 0">
+        <Border Width="100" BorderBrush="{StaticResource KalingRed5}" BorderThickness="0 0 1 0" Padding="0 0 10 0">
             <TextBlock Text="{Binding OutputNormalRate}" FontSize="20" FontFamily="Consolas" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         </Border>
-        <Border Width="100" BorderBrush="SkyBlue" BorderThickness="0 0 1 0" Padding="0 0 10 0">
+        <Border Width="100" BorderBrush="{StaticResource KalingRed5}" BorderThickness="0 0 1 0" Padding="0 0 10 0">
             <TextBlock Text="{Binding OutputOutputV1}" FontSize="20" FontFamily="Consolas" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         </Border>
-        <Border Width="100" BorderBrush="SkyBlue" BorderThickness="0 0 1 0" Padding="0 0 10 0">
+        <Border Width="100" BorderBrush="{StaticResource KalingRed5}" BorderThickness="0 0 1 0" Padding="0 0 10 0">
             <TextBlock Text="{Binding OutputV1Rate}" FontSize="20" FontFamily="Consolas" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         </Border>
-        <Border BorderBrush="SkyBlue" BorderThickness="0 0 3 0" Width="50">
+        <Border BorderBrush="{StaticResource KalingRed5}" BorderThickness="0 0 3 0" Width="50">
             <Button x:Name="DeleteButton" BorderBrush="Transparent" Background="Transparent" Click="DeleteButton_Click">
                 <Button.ContentTemplate>
                     <DataTemplate>

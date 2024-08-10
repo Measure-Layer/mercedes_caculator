@@ -60,6 +60,7 @@ namespace MapleWPF
                 {
                     combo.UpdateIrPctg();
                     combo.UpdateAllComboPctg();
+                    combo.UpdateE2Pctg();
                     combo.UpdateOutput();
                 }
                 Skill.UpdateCombo();

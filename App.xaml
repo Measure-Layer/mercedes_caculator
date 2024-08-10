@@ -6,8 +6,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="MapleRDictionary.xaml"/>
                 <ResourceDictionary Source="SkillLevelTextBoxRD.xaml"/>
+                <ResourceDictionary Source="ColorDictionary.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

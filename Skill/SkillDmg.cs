@@ -20,6 +20,9 @@ namespace MapleWPF
             { ab, 3986.4 },
             { rm, 4791.6 },
             { le, 2805.0 },
+            { "wee", 0.0 },
+            { "sre", 0.0 },
+            { "lte", 0.0 }
         };
 
         public static Dictionary<string, double> NormalCompPctgDict = new Dictionary<string, double> 
@@ -33,7 +36,10 @@ namespace MapleWPF
             { rr, 0.0 },
             { ab, 0.0 },
             { rm, 0.0 },
-            { le, 0.0 }
+            { le, 0.0 },
+            { "wee", 0.0 },
+            { "sre", 0.0 },
+            { "lte", 0.0 }
         };
 
         public static void UpdateNormalCompPctg(string skillName)
@@ -80,7 +86,10 @@ namespace MapleWPF
             { rr, 0.0 },
             { ab, 0.0 },
             { rm, 0.0 },
-            { le, 0.0 }
+            { le, 0.0 },
+            { "wee", 0.0 },
+            { "sre", 0.0 },
+            { "lte", 0.0 }
         };
         // 未考虑V2提供的终伤
         public static Dictionary<string, double> V1V2CompPctgDict = new Dictionary<string, double>
@@ -94,7 +103,10 @@ namespace MapleWPF
             { rr, 0.0 },
             { ab, 0.0 },
             { rm, 0.0 },
-            { le, 0.0 }
+            { le, 0.0 },
+            { "wee", 0.0 },
+            { "sre", 0.0 },
+            { "lte", 0.0 }
         };
     }
 }

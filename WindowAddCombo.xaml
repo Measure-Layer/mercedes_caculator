@@ -9,7 +9,29 @@
         Loaded="Window_Loaded"
         ResizeMode="NoResize"
         Title="添加Combo" Height="400" Width="750">
-    <Grid Background="AliceBlue">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource KalingRed1}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource KalingRed2}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+    <Grid Background="{StaticResource KalingRed0}">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -114,8 +136,8 @@
             </StackPanel>
         </Border>
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="okButton" Content="确定" FontSize="20" Background="LightBlue" Margin="10" Width="100" Click="okButton_Click"/>
-            <Button x:Name="cancelButton" Content="取消" FontSize="20" Background="LightBlue" Margin="10" Width="100" Click="cancelButton_Click"/>
+            <Button x:Name="okButton" Content="确定" FontSize="20" Background="{StaticResource KalingRed3}" Margin="10" Width="100" Click="okButton_Click"/>
+            <Button x:Name="cancelButton" Content="取消" FontSize="20" Background="{StaticResource KalingRed3}" Margin="10" Width="100" Click="cancelButton_Click"/>
         </StackPanel>
         
     </Grid>

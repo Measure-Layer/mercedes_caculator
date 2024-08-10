@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace MapleWPF
 {
@@ -10,10 +12,13 @@ namespace MapleWPF
     {
         public double NormalComboPctg;
         public double NormalIrPctg;
+        public double NormalE2Pctg;
         public double V1ComboPctg;
         public double V1IrPctg;
+        public double V1E2Pctg;
         public double V1V2ComboPctg;
         public double V1V2IrPctg;
+        public double V1V2E2Pctg;
         public double V1tPctg;
 
         public double TotalDuration;
@@ -84,17 +89,48 @@ namespace MapleWPF
             }
         }
 
+        public void UpdateE2Pctg()
+        {
+            NormalE2Pctg = 0.0;
+            V1E2Pctg = 0.0;
+            V1V2E2Pctg = 0.0;
+            if (SkillList.Contains("we"))
+            {
+                double weeCd = Skill.CalcCd(12.0, 0.94, _hatSecond);
+                double round = Math.Ceiling(weeCd / TotalDuration);
+                NormalE2Pctg += (Skill.NormalCompPctgDict["wee"] - Skill.NormalCompPctgDict["we"]) / round;
+                V1E2Pctg += (Skill.V1CompPctgDict["wee"] - Skill.V1CompPctgDict["we"]) / round;
+                V1V2E2Pctg += (Skill.V1V2CompPctgDict["wee"] - Skill.V1V2CompPctgDict["we"]) / round;
+            }
+            if (SkillList.Contains("sr"))
+            {
+                double sreCd = Skill.CalcCd(6.0, 0.94, _hatSecond);
+                double round = Math.Ceiling(sreCd / TotalDuration);
+                NormalE2Pctg += (Skill.NormalCompPctgDict["sre"] - Skill.NormalCompPctgDict["sr"]) / round;
+                V1E2Pctg += (Skill.V1CompPctgDict["sre"] - Skill.V1CompPctgDict["sr"]) / round;
+                V1V2E2Pctg += (Skill.V1V2CompPctgDict["sre"] - Skill.V1V2CompPctgDict["sr"]) / round;
+            }
+            if (SkillList.Contains("we"))
+            {
+                double lteCd = Skill.CalcCd(6.0, 0.94, _hatSecond);
+                double round = Math.Ceiling(lteCd / TotalDuration);
+                NormalE2Pctg += (Skill.NormalCompPctgDict["lte"] - Skill.NormalCompPctgDict["lt"]) / round;
+                V1E2Pctg += (Skill.V1CompPctgDict["lte"] - Skill.V1CompPctgDict["lt"]) / round;
+                V1V2E2Pctg += (Skill.V1V2CompPctgDict["lte"] - Skill.V1V2CompPctgDict["lt"]) / round;
+            }
+        }
+
         public void UpdateOutput()
         {
-            OutputNormalPctg = NormalComboPctg + (_filledWithIr ? NormalIrPctg : 0.0);
+            OutputNormalPctg = NormalComboPctg + (_filledWithIr ? NormalIrPctg : 0.0) + NormalE2Pctg;
             if (CanBeRiding && Riding)
             {
                 OutputNormalPctg *= Skill.V2TotalFinalDmg;
-                OutputV1Pctg = (V1V2ComboPctg + (_filledWithIr ? V1V2IrPctg : 0.0)) * Skill.V2TotalFinalDmg;
+                OutputV1Pctg = (V1V2ComboPctg + (_filledWithIr ? V1V2IrPctg : 0.0)) * Skill.V2TotalFinalDmg + V1V2E2Pctg;
             }
             else
             {
-                OutputV1Pctg = V1ComboPctg + (_filledWithIr ? V1IrPctg : 0.0);
+                OutputV1Pctg = V1ComboPctg + (_filledWithIr ? V1IrPctg : 0.0) + V1E2Pctg;
             }
             OutputV1Pctg += V1tPctg;
             if (TotalDuration == 0.0)

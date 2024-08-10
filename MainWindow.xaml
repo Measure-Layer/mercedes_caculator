@@ -7,10 +7,30 @@
         mc:Ignorable="d"
         Title="MapleStory Mercedes Action Strategy Analysis" Height="900" Width="1600" ResizeMode="NoResize">
     <Window.Resources>
-        <SolidColorBrush x:Key="BorderColor" Color="SkyBlue"/>
+        <SolidColorBrush x:Key="BorderColor" Color="{StaticResource KalingRed5Color}"/>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource KalingRed1}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource KalingRed2}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
-    
-    <Grid Background="AliceBlue">
+
+
+    <Grid Background="{StaticResource KalingRed0}">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -27,22 +47,22 @@
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Image Margin="0 0 20 0" Source="Images/ir.png" Stretch="None"/>
-                <ComboBox x:Name="M1ComboBox" Background="LightBlue" Width="50" VerticalAlignment="Center" FontSize="20" FontFamily="Consolas"
+                <ComboBox x:Name="M1ComboBox" Background="{StaticResource KalingRed3}" Width="50" VerticalAlignment="Center" FontSize="20" FontFamily="Consolas"
                           SelectionChanged="M1ComboBox_SelectionChanged"/>
             </StackPanel>
             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Image Margin="0 0 20 0" Source="Images/irDisabled.png" Stretch="None"/>
-                <ComboBox x:Name="M2ComboBox" Background="LightBlue" Width="50" VerticalAlignment="Center" FontSize="20" FontFamily="Consolas"
+                <Image Margin="0 0 20 0" Source="Images/we.png" Stretch="None"/>
+                <ComboBox x:Name="M2ComboBox" Background="{StaticResource KalingRed3}" Width="50" VerticalAlignment="Center" FontSize="20" FontFamily="Consolas"
                           SelectionChanged="M2ComboBox_SelectionChanged"/>
             </StackPanel>
             <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Image Margin="0 0 20 0" Source="Images/v1.png" Stretch="None"/>
-                <ComboBox x:Name="V1ComboBox" Background="LightBlue" Width="50" VerticalAlignment="Center" FontSize="20" FontFamily="Consolas"
+                <ComboBox x:Name="V1ComboBox" Background="{StaticResource KalingRed3}" Width="50" VerticalAlignment="Center" FontSize="20" FontFamily="Consolas"
                           SelectionChanged="V1ComboBox_SelectionChanged"/>
             </StackPanel>
             <StackPanel Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Image Margin="0 0 20 0" Source="Images/v2.png" Stretch="None"/>
-                <ComboBox x:Name="V2ComboBox" Background="LightBlue" Width="50" VerticalAlignment="Center" FontSize="20" FontFamily="Consolas"
+                <ComboBox x:Name="V2ComboBox" Background="{StaticResource KalingRed3}" Width="50" VerticalAlignment="Center" FontSize="20" FontFamily="Consolas"
                           SelectionChanged="V2ComboBox_SelectionChanged"/>
             </StackPanel>
             <Button x:Name="SpeedButton" Grid.Column="4" Content="Current Server: CMS" Foreground="Red" FontSize="20" FontFamily="Consolas" Click="SpeedButton_Click"/>
@@ -57,19 +77,19 @@
                 </Grid.RowDefinitions>
                 <Border Grid.Row="0" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 3 0 3" Padding="1 0 0 0">
                     <StackPanel Orientation="Horizontal">
-                        <Border Background="LightBlue" Width="50" BorderBrush="{StaticResource BorderColor}" BorderThickness="3 0 1 0">
+                        <Border Background="{StaticResource KalingRed3}" Width="50" BorderBrush="{StaticResource BorderColor}" BorderThickness="3 0 1 0">
                             <TextBlock Text="序号" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
-                        <Border Background="LightBlue" Width="280" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
+                        <Border Background="{StaticResource KalingRed3}" Width="280" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
                             <TextBlock Text="技能序列" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                         <Border Width="50" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
                             <TextBlock Text="CD" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
-                        <Border Background="LightBlue" Width="50" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
+                        <Border Background="{StaticResource KalingRed3}" Width="50" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
                             <TextBlock Text="循环" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
-                        <Border Background="LightBlue" Width="100" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
+                        <Border Background="{StaticResource KalingRed3}" Width="100" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
                             <TextBlock Text="停顿(ms)" TextWrapping="Wrap" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                         <Border Width="75" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
@@ -78,7 +98,7 @@
                         <Border Width="100" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
                             <TextBlock Text="伊师塔" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
-                        <Border Background="LightBlue" Width="100" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
+                        <Border Background="{StaticResource KalingRed3}" Width="100" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
@@ -91,7 +111,7 @@
                         <Border Width="50" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
                             <TextBlock Text="骑马" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
-                        <Border Background="LightBlue" Width="100" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
+                        <Border Background="{StaticResource KalingRed3}" Width="100" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
@@ -101,10 +121,10 @@
                                 <TextBlock Grid.Row="1" Text="伤害密度" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Grid>
                         </Border>
-                        <Border Background="LightBlue" Width="100" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
+                        <Border Background="{StaticResource KalingRed3}" Width="100" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
                             <TextBlock Text="比率" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
-                        <Border Background="LightBlue" Width="100" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
+                        <Border Background="{StaticResource KalingRed3}" Width="100" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
@@ -114,7 +134,7 @@
                                 <TextBlock Grid.Row="1" Text="伤害密度" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Grid>
                         </Border>
-                        <Border Background="LightBlue" Width="100" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
+                        <Border Background="{StaticResource KalingRed3}" Width="100" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 1 0">
                             <TextBlock Text="比率" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                         <Border Width="50" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 0 3 0">
@@ -122,7 +142,7 @@
                         </Border>
                     </StackPanel>
                 </Border>
-                <ListBox KeyDown="ComboListBox_KeyDown" x:Name="ComboListBox" Grid.Row="2" Background="AliceBlue" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 1 0 3">
+                <ListBox KeyDown="ComboListBox_KeyDown" x:Name="ComboListBox" Grid.Row="2" Background="{StaticResource KalingRed0}" BorderBrush="{StaticResource BorderColor}" BorderThickness="0 1 0 3">
                     <ListBox.ItemContainerStyle>
                         <Style TargetType="ListBoxItem">
                             <Setter Property="Margin" Value="0,0,0,1"/>
@@ -130,7 +150,7 @@
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="ListBoxItem">
-                                        <Border BorderBrush="SkyBlue" BorderThickness="0,0,0,1">
+                                        <Border BorderBrush="{StaticResource KalingRed5}" BorderThickness="0,0,0,1">
                                             <!-- 底部线条分隔 -->
                                             <ContentPresenter/>
                                         </Border>
@@ -147,6 +167,6 @@
                 </ListBox>
             </Grid>
         </Border>
-        <Button x:Name="AddButton" Width="1300" Height="50" Content="Add New Combo" FontSize="20" Background="LightBlue" Grid.Row="2" Click="AddCombo"/>
+        <Button x:Name="AddButton" Width="1300" Height="50" Content="Add New Combo" FontSize="20" Background="{StaticResource KalingRed3}" Grid.Row="2" Click="AddCombo"/>
     </Grid>
 </Window>

@@ -36,5 +36,29 @@ namespace MapleWPF
             { rm, false },
             { le, false }
         };
+
+        public static double CalcCd(double cd, double cdRate, double hatSecond)
+        {
+            cd *= cdRate;
+            if (cd >= 10)
+            {
+                if (hatSecond >= cd - 10)
+                {
+                    hatSecond -= cd - 10;
+                    cd = 10;
+                }
+                else
+                {
+                    cd -= hatSecond;
+                    hatSecond = 0;
+                }
+            }
+            if (cd >= 5 && hatSecond >= 0)
+            {
+                cd = cd * (1 - hatSecond * 0.05);
+                cd = cd >= 5 ? cd : 5;
+            }
+            return cd;
+        }
     }
 }

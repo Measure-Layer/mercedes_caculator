@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="KalingRed0" Color="#FFF0F0"/>
+    <SolidColorBrush x:Key="KalingRed1" Color="#FCD1D1"/>
+    <SolidColorBrush x:Key="KalingRed2" Color="#F8B2B2"/>
+    <SolidColorBrush x:Key="KalingRed3" Color="#F59393"/>
+    <SolidColorBrush x:Key="KalingRed4" Color="#F17474"/>
+    <SolidColorBrush x:Key="KalingRed5" Color="#EE5555"/>
+    <Color x:Key="KalingRed0Color">#FFF0F0</Color>
+    <Color x:Key="KalingRed1Color">#FCD1D1</Color>
+    <Color x:Key="KalingRed2Color">#F8B2B2</Color>
+    <Color x:Key="KalingRed3Color">#F59393</Color>
+    <Color x:Key="KalingRed4Color">#F17474</Color>
+    <Color x:Key="KalingRed5Color">#EE5555</Color>
+</ResourceDictionary>
