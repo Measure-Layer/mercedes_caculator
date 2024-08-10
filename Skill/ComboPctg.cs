@@ -104,7 +104,7 @@ namespace MapleWPF
             }
             if (SkillList.Contains("sr"))
             {
-                double sreCd = Skill.CalcCd(6.0, 0.94, _hatSecond);
+                double sreCd = Skill.CalcCd(12.0, 0.94, _hatSecond);
                 double round = Math.Ceiling(sreCd / TotalDuration);
                 NormalE2Pctg += (Skill.NormalCompPctgDict["sre"] - Skill.NormalCompPctgDict["sr"]) / round;
                 V1E2Pctg += (Skill.V1CompPctgDict["sre"] - Skill.V1CompPctgDict["sr"]) / round;
