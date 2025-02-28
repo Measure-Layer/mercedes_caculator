@@ -43,6 +43,8 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center">
@@ -56,17 +58,27 @@
                           SelectionChanged="M2ComboBox_SelectionChanged"/>
             </StackPanel>
             <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Image Margin="0 0 20 0" Source="Images/ss.png" Stretch="None"/>
+                <ComboBox x:Name="M3ComboBox" Background="{StaticResource KalingRed3}" Width="50" VerticalAlignment="Center" FontSize="20" FontFamily="Consolas"
+                          SelectionChanged="M3ComboBox_SelectionChanged"/>
+            </StackPanel>
+            <StackPanel Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Image Margin="0 0 20 0" Source="Images/jl.png" Stretch="None"/>
+                <ComboBox x:Name="M4ComboBox" Background="{StaticResource KalingRed3}" Width="50" VerticalAlignment="Center" FontSize="20" FontFamily="Consolas"
+                          SelectionChanged="M4ComboBox_SelectionChanged"/>
+            </StackPanel>
+            <StackPanel Grid.Column="4" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Image Margin="0 0 20 0" Source="Images/v1.png" Stretch="None"/>
                 <ComboBox x:Name="V1ComboBox" Background="{StaticResource KalingRed3}" Width="50" VerticalAlignment="Center" FontSize="20" FontFamily="Consolas"
                           SelectionChanged="V1ComboBox_SelectionChanged"/>
             </StackPanel>
-            <StackPanel Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Grid.Column="5" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Image Margin="0 0 20 0" Source="Images/v2.png" Stretch="None"/>
                 <ComboBox x:Name="V2ComboBox" Background="{StaticResource KalingRed3}" Width="50" VerticalAlignment="Center" FontSize="20" FontFamily="Consolas"
                           SelectionChanged="V2ComboBox_SelectionChanged"/>
             </StackPanel>
-            <Button x:Name="SpeedButton" Grid.Column="4" Content="Current Server: CMS" Foreground="Red" FontSize="20" FontFamily="Consolas" Click="SpeedButton_Click"/>
-            <Button x:Name="Help" Grid.Column="5" Content="Help" Margin="30 0 0 0" Click="Help_Click"/>
+            <Button x:Name="SpeedButton" Grid.Column="6" Content="Current Server: CMS" Foreground="Red" FontSize="20" FontFamily="Consolas" Click="SpeedButton_Click"/>
+            <Button x:Name="Help" Grid.Column="7" Content="Help" Margin="30 0 0 0" Click="Help_Click"/>
         </Grid>
         <Border Grid.Row="1" Padding="10" Width="auto" HorizontalAlignment="Center">
             <Grid Grid.Row="1">

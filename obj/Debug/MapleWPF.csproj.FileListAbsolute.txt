@@ -16,9 +16,6 @@ E:\projects_csharp\MapleWPF\obj\Debug\MapleWPF.pdb
 E:\projects_csharp\MapleWPF\obj\Debug\App.baml
 E:\projects_csharp\MapleWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
 E:\projects_csharp\MapleWPF\obj\Debug\SkillLevelTextBoxRD.baml
-E:\projects_csharp\MapleWPF\obj\Debug\ConstBoard.g.cs
-E:\projects_csharp\MapleWPF\obj\Debug\ConstBoard.baml
-E:\projects_csharp\MapleWPF\obj\Debug\MapleRDictionary.baml
 E:\projects_csharp\MapleWPF\obj\Debug\SkillConstItem.g.cs
 E:\projects_csharp\MapleWPF\obj\Debug\TestUserControl.g.cs
 E:\projects_csharp\MapleWPF\obj\Debug\SkillConstItem.baml
@@ -29,3 +26,4 @@ E:\projects_csharp\MapleWPF\obj\Debug\WindowAddCombo.g.cs
 E:\projects_csharp\MapleWPF\obj\Debug\WindowAddCombo.baml
 E:\projects_csharp\MapleWPF\obj\Debug\WindowHelp.g.cs
 E:\projects_csharp\MapleWPF\obj\Debug\WindowHelp.baml
+E:\projects_csharp\MapleWPF\obj\Debug\ColorDictionary.baml

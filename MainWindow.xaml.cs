@@ -112,6 +112,16 @@ namespace MapleWPF
             Skill.M2Level = (int)M2ComboBox.SelectedValue;
         }
 
+        private void M3ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
+
+        private void M4ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
+
         private void V1ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Skill.E1Level = (int)V1ComboBox.SelectedValue;

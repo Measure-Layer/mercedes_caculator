@@ -97,7 +97,7 @@ namespace MapleWPF
             if (SkillList.Contains("we"))
             {
                 double weeCd = Skill.CalcCd(12.0, 0.94, _hatSecond);
-                double round = Math.Ceiling(weeCd / TotalDuration);
+                double round = Math.Ceiling(weeCd * 1000 / TotalDuration);
                 NormalE2Pctg += (Skill.NormalCompPctgDict["wee"] - Skill.NormalCompPctgDict["we"]) / round;
                 V1E2Pctg += (Skill.V1CompPctgDict["wee"] - Skill.V1CompPctgDict["we"]) / round;
                 V1V2E2Pctg += (Skill.V1V2CompPctgDict["wee"] - Skill.V1V2CompPctgDict["we"]) / round;
@@ -105,15 +105,15 @@ namespace MapleWPF
             if (SkillList.Contains("sr"))
             {
                 double sreCd = Skill.CalcCd(12.0, 0.94, _hatSecond);
-                double round = Math.Ceiling(sreCd / TotalDuration);
+                double round = Math.Ceiling(sreCd * 1000 / TotalDuration);
                 NormalE2Pctg += (Skill.NormalCompPctgDict["sre"] - Skill.NormalCompPctgDict["sr"]) / round;
                 V1E2Pctg += (Skill.V1CompPctgDict["sre"] - Skill.V1CompPctgDict["sr"]) / round;
                 V1V2E2Pctg += (Skill.V1V2CompPctgDict["sre"] - Skill.V1V2CompPctgDict["sr"]) / round;
             }
-            if (SkillList.Contains("we"))
+            if (SkillList.Contains("lt"))
             {
                 double lteCd = Skill.CalcCd(6.0, 0.94, _hatSecond);
-                double round = Math.Ceiling(lteCd / TotalDuration);
+                double round = Math.Ceiling(lteCd * 1000 / TotalDuration);
                 NormalE2Pctg += (Skill.NormalCompPctgDict["lte"] - Skill.NormalCompPctgDict["lt"]) / round;
                 V1E2Pctg += (Skill.V1CompPctgDict["lte"] - Skill.V1CompPctgDict["lt"]) / round;
                 V1V2E2Pctg += (Skill.V1V2CompPctgDict["lte"] - Skill.V1V2CompPctgDict["lt"]) / round;

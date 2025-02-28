@@ -72,11 +72,11 @@ namespace MapleWPF
         }
         public static void UpdateIrmPctg()
         {
-            IrmPctg = (400 + 7 * _m1Level) * 3;
+            IrmPctg = (400 + 7 * _m1Level + 30 + 7 * _m2Level) * 3;
         }
         public static void UpdateIrmcPctg()
         {
-            IrmcPctg = (500 + 8 * _m1Level) * 8;
+            IrmcPctg = (500 + 8 * _m1Level + 80 + 7 * _m2Level) * 8;
         }
         public static void UpdateIrmePctgPerSkill()
         {
